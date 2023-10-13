@@ -13,10 +13,20 @@
 <hr/>
 
 <h2>Registered Machines</h2>
- @foreach (MachineEngineer registered in Model.JoinEntities)
+
+@if (Model.JoinEntities.Count == 0)
+      {
+        <p>No Machines registered.</p>
+      }
+else
+{
+  <ul>
+    @foreach (MachineEngineer registered in Model.JoinEntities)
     {
       <li>@Html.ActionLink($"{registered.Machine.Name}", "Details", "Machines", new { id = registered.MachineId})</li>
     }
+  </ul>
+}
 
 <p>@Html.ActionLink("Register Engineer", "Register", new { id = @Model.EngineerId })</p>
 <p>@Html.ActionLink("Back to Engineers", "Index")</p>

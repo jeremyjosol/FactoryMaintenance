@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@model Factory.Models.Engineer
+@model Factory.Models.Machine
 
 <h2>Register</h2>
 
@@ -10,14 +10,14 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.EngineerId)
+  @Html.HiddenFor(model => model.MachineId)
 
-  @Html.Label("Select Machine to Register")
+  @Html.Label("Select Engineer to Register")
   <br />
-  @Html.DropDownList("MachineId")
+  @Html.DropDownList("EngineerId")
 
   <input type="submit" value="Register" class="btn btn-success" />
 }
 
 <hr/>
-<p>@Html.ActionLink("Back to Engineers", "Index")</p>
+<p>@Html.ActionLink("Back to Machines", "Index")</p>

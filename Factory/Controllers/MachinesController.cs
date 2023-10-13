@@ -51,5 +51,26 @@ namespace Factory.Controllers
                                    .FirstOrDefault(machine => machine.MachineId == id);
       return View(selectedMachine);
     }
+
+    public ActionResult Register(int id)
+    {
+      Machine machineToRegister = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
+      return View(machineToRegister);
+    }
+
+    [HttpPost]
+    public ActionResult Register(Engineer selectedEngineer, Machine selectedMachine)
+    {
+      #nullable enable
+      MachineEngineer? joinEntity = _db.MachineEngineers.FirstOrDefault(join => (join.EngineerId == selectedEngineer.EngineerId && join.MachineId == selectedMachine.MachineId));
+      #nullable disable
+      if (joinEntity == null && selectedEngineer.EngineerId != 0)
+      {
+        _db.MachineEngineers.Add(new MachineEngineer() { EngineerId = selectedEngineer.EngineerId, MachineId = selectedMachine.MachineId });
+        _db.SaveChanges();
+      }
+      return RedirectToAction("Details", new { id = selectedMachine.MachineId });
+    }
   }
 }
