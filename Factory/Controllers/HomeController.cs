@@ -16,11 +16,10 @@ namespace Factory.Controllers
     }
     public ActionResult Index()
     {
-    List<MachineEngineer> entireFactory = _db.MachineEngineers
-                                             .Include(factory => factory.Machine)
-                                             .Include(factory => factory.Engineer)
-                                             .ToList();
-    return View(entireFactory);
+      ViewBag.MachineEngineers = _db.MachineEngineers.ToList();
+      ViewBag.Engineers = _db.Engineers.ToList();
+      ViewBag.Machines = _db.Machines.ToList();
+      return View();
     }
   }
 }
