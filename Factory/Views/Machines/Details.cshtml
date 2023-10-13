@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine;
+@using Factory.Models;
+
+<div class="container">
+  <h2>Machine Details</h2>
+  <hr/>
+  <p><strong>@Html.DisplayNameFor(selectedMachine => selectedMachine.Name)</strong>: @Html.DisplayFor(selectedMachine => selectedMachine.Name)</p>
+</div>
+<hr/>
+
+<p>@Html.ActionLink("Register Machine", "Register")</p>
+<p>@Html.ActionLink("Back to Machines", "Index")</p>
