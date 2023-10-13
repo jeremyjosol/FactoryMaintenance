@@ -2,8 +2,42 @@
   Layout = "_Layout";
 }
 
+@using Factory.Models;
+
 <h1>Factory</h1>
 <hr/>
+<h4>Engineers</h4>
+
+@if(@Model.Engineers.Count == 0)
+{
+  <p>No Engineers available.</p>
+}
+else
+{
+  <ul>
+    @foreach(Engineer added in Model)
+    {
+      <li>@Html.ActionLink($"{added.Name}", "Details", new { id = added.EngineerId })</li>
+    }
+  </ul>
+}
+
+<h4>Machines</h4>
+
+@if(@Model.Machines.Count == 0)
+{
+  <p>No Machines available.</p>
+}
+else
+{
+  <ul>
+    @foreach(Machine added in Model)
+    {
+      <li>@Html.ActionLink($"{added.Name}", "Details", new { id = added.MachineId })</li>
+    }
+  </ul>
+}
+
 <p>@Html.ActionLink("View Engineers", "Index", "Engineers")</p>
 <p>@Html.ActionLink("View Machines", "Index", "Machines")</p>
 <p>@Html.ActionLink("Add an Engineer", "Create", "Engineers")</p>
