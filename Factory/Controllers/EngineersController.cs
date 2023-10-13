@@ -65,7 +65,7 @@ namespace Factory.Controllers
       #nullable enable
       MachineEngineer? joinEntity = _db.MachineEngineers.FirstOrDefault(join => (join.MachineId == selectedMachine.MachineId && join.EngineerId == selectedEngineer.EngineerId));
       #nullable disable
-      if (joinEntity == null && selectedEngineer.EngineerId != 0)
+      if (joinEntity == null && selectedMachine.MachineId != 0)
       {
         _db.MachineEngineers.Add(new MachineEngineer() { MachineId = selectedMachine.MachineId, EngineerId = selectedEngineer.EngineerId });
         _db.SaveChanges();
