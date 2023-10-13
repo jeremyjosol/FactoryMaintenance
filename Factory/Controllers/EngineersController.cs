@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using Factory.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Factory.Controllers
 {
@@ -19,6 +20,28 @@ namespace Factory.Controllers
     {
       List<Engineer> allEngineers = _db.Engineers.ToList();
       return View(allEngineers);
+    }
+
+    public ActionResult Create()
+    {
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Engineer newEngineer)
+    {
+      if (!ModelState.IsValid)
+      {
+        ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+        return View(newEngineer);
+      }
+      else
+      {
+        _db.Engineers.Add(newEngineer);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
     }
   }
 }

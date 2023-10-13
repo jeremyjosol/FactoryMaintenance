@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add an Engineer</h1>
+<hr/>
+
+@model Factory.Models.Engineer
+
+<div class="container">
+  @using (Html.BeginForm())
+  {
+    @Html.TextBoxFor(model => model.Name, new { placeholder= "Enter Name" })
+    <br />
+    <br />
+    <input type="submit" value="Add Package" class="btn btn-primary" />
+  }
+</div>
+<br />
+<hr/>
+
+<div class="container">
+  <p>@Html.ActionLink("Back to Engineers", "Index")</p>
+</div>
+
+ @* <h6>@Html.LabelFor(model => model.JoinEntities)</h6>
+    @Html.DropDownList("MachineId") *@
