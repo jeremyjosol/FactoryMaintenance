@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add a Machine</h1>
+<hr/>
+
+@model Factory.Models.Machine
+
+<div class="container">
+  @using (Html.BeginForm())
+  {
+    @Html.TextBoxFor(model => model.Name, new { placeholder= "Enter Name" })
+    <br />
+    <br />
+    <input type="submit" value="Add" class="btn btn-primary" />
+  }
+</div>
+<br />
+<hr/>
+
+<div class="container">
+  <p>@Html.ActionLink("Back to Machines", "Index")</p>
+</div>
