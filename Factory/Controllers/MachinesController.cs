@@ -70,7 +70,7 @@ namespace Factory.Controllers
         _db.MachineEngineers.Add(new MachineEngineer() { EngineerId = selectedEngineer.EngineerId, MachineId = selectedMachine.MachineId });
         _db.SaveChanges();
       }
-      return RedirectToAction("Details", new { id = selectedMachine.MachineId });
+      return RedirectToAction("Details", "Engineers", new { id = selectedMachine.MachineId });
     }
   }
 }
