@@ -43,5 +43,14 @@ namespace Factory.Controllers
         return RedirectToAction("Index");
       }
     }
+
+    public ActionResult Details(int id)
+    {
+      Engineer selectedEngineer = _db.Engineers
+                                     .Include(engineer => engineer.JoinEntities)
+                                     .ThenInclude(joinEntity => joinEntity.Machine)
+                                     .FirstOrDefault(engineer => engineer.EngineerId == id);
+      return View(selectedEngineer);
+    }
   }
 }
