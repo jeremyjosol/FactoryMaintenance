@@ -29,12 +29,26 @@ a {
 .container {
   background-color: rgba(0, 0, 0, 0.77);
   height: 350px;
-  width: 500px;
-  margin: auto;
-  margin-top: 75px;
+  width: 300px;
+  margin: 75px 0 0 300px;
+  margin-left: 300px;
   border-radius: 25px;
   text-align: center;
   overflow: auto;
+}
+
+.navigation {
+  background-color: blue;
+  margin: auto;
+  margin: 100px 0 0 25px;
+  width: 100px;
+  position: fixed;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 75px 0 0 100px;
+  }
 }
 
 .material-symbols-outlined {

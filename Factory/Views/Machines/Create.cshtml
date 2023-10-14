@@ -7,18 +7,15 @@
 
 @model Factory.Models.Machine
 
-<div class="container">
   @using (Html.BeginForm())
   {
-    @Html.TextBoxFor(model => model.Name, new { placeholder= "Enter Name" })
+    @Html.TextBoxFor(model => model.Name, new { placeholder= "Name of Machine" })
     <br />
     <br />
-    <input type="submit" value="Add" class="btn btn-primary" />
+    <input type="submit" value="Add Machine" class="btn btn-primary" />
   }
 </div>
 <br />
 <hr/>
 
-<div class="container">
   <p>@Html.ActionLink("Back to Machines", "Index")</p>
-</div>
