@@ -19,11 +19,10 @@
     <div class="row">
       <div class="col-1">
         <div class="navigation">
-        <p>@Html.ActionLink("Home", "Index", "Home")</p>
-        <p>@Html.ActionLink("Engineers", "Index", "Engineers")</p>
-        <p>@Html.ActionLink("Machines", "Index", "Machines")</p>
-        @* <p>@Html.ActionLink("+ Engineer", "Create", "Engineers")</p>
-        <p>@Html.ActionLink("+ Machine", "Create", "Machines")</p> *@
+        <p class="index-new"><a href='/'>Home <span class="material-symbols-outlined">home</span></a></p>
+        <p class="index-new"><a href='/machines/'>Machines <span class="material-symbols-outlined">menu</span></a></p>
+        <p class="index-new"><a href='/engineers/'>Engineers <span class="material-symbols-outlined">menu</span></a></p>
+        <p class="index-new"><a href='/machines/create'>Machine <span class="material-symbols-outlined">Add_circle</span></a></p>
         <p class="index-new"><a href='/engineers/create'>Engineer <span class="material-symbols-outlined">Add_circle</span></a></p>
       </div>
       </div>
