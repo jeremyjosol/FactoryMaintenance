@@ -17,6 +17,7 @@ h1 {
 }
 
 h2 {
+  font-size: 50px;
   font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -34,4 +35,17 @@ a {
   border-radius: 25px;
   text-align: center;
   overflow: auto;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.new {
+  margin: auto;
+  font-size: 40px;
 }
