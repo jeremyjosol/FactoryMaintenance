@@ -4,8 +4,6 @@
 
 @using Factory.Models;
 
-<h2>Home</h2>
-
 @if (ViewBag.Engineers.Count == 0 && ViewBag.Machines.Count == 0)
 {
   <p>No Engineers or Machines available.</p>
@@ -14,23 +12,22 @@ else
 {
     @if (ViewBag.Engineers.Count > 0)
     {
-      <h4>Engineers</h4>
-      <ul>
+      <h2>Engineers</h2>
+      <hr />
         @foreach (Engineer added in ViewBag.Engineers)
         {
-          <li>@Html.ActionLink(added.Name, "Details", "Engineers", new { id = added.EngineerId })</li>
+          <p>- @Html.ActionLink(added.Name, "Details", "Engineers", new { id = added.EngineerId })</p>
         }
-      </ul>
     }
     @if (ViewBag.Machines.Count > 0)
     {
-      <h4>Machines</h4>
-      <ul>
+      <br />
+      <h2>Machines</h2>
+      <hr />
         @foreach (Machine added in ViewBag.Machines)
         {
-          <li>@Html.ActionLink(added.Name, "Details", "Machines", new { id = added.MachineId })</li>
+          <p>- @Html.ActionLink(added.Name, "Details", "Machines", new { id = added.MachineId })</p>
         }
-      </ul>
     }
 }
 

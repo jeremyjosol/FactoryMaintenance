@@ -14,10 +14,8 @@
 }
 else 
 {
-  <ul>
     @foreach(Machine added in Model)
     {
-      <li>@Html.ActionLink($"{added.Name}", "Details", new { id = added.MachineId })</li>
+      <p>- @Html.ActionLink($"{added.Name}", "Details", new { id = added.MachineId })</p>
     }
-  </ul>
 }

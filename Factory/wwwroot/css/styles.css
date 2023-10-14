@@ -29,9 +29,13 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-bottom: 2px;
+}
+
 .container {
   background-color: rgba(0, 0, 0, 0.499);
-  height: 270px;
+  height: 300px;
   max-height: 350px;
   width: 350px;
   margin: 50px 0 0 300px;
@@ -52,6 +56,10 @@ a {
   .container {
     margin: 75px 0 0 100px;
   }
+}
+
+.btn {
+  width: 325px;
 }
 
 .material-symbols-outlined {

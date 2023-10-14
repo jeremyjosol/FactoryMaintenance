@@ -14,7 +14,7 @@
 
   @Html.Label("Select Machine to Register")
   <br />
-  @Html.DropDownList("MachineId")
+  @Html.DropDownList("MachineId", null, new { @class = "form-control", required = "required" })
 
   <input type="submit" value="Register" class="btn btn-success" />
 }

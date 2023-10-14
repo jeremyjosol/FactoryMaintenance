@@ -14,10 +14,8 @@
 }
 else 
 {
-  <ul>
-    @foreach(Engineer added in Model)
-    {
-      <li>@Html.ActionLink($"{added.Name}", "Details", new { id = added.EngineerId })</li>
-    }
-  </ul>
+  @foreach(Engineer added in Model)
+  {
+    <p>- @Html.ActionLink($"{added.Name}", "Details", new { id = added.EngineerId })</p>
+  }
 }
