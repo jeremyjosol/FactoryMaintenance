@@ -7,11 +7,18 @@
 @if (ViewBag.Engineers.Count == 0 && ViewBag.Machines.Count == 0)
 { 
   <br />
-  <p>No Engineers or Machines available.</p>
+  <h5>Welcome to your Portal.</h5>
   <br />
-  <p class="new"><a href='/machines/create'>New Machine <span class="material-symbols-outlined">Add_circle</span></a></p>
-  <p class="new"><a href='/engineers/create'>New Engineer <span class="material-symbols-outlined">Add_circle</span></a></p>
-
+  <br />
+  <h6 class="zero">* Currently, there are no 
+  <br /> Engineers or Machines
+  <br /> in the portal.</h6>
+  <br />
+  <h6>Create a new 
+  <br />
+  Engineer or Machine 
+  <br />
+  to update the Portal.</h6>
 }
 else
 {
