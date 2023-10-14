@@ -10,15 +10,15 @@
 <p><strong>Licensed Engineers</strong></p>
 
 @if (Model.JoinEntities.Count == 0)
-      {
-        <p class="zero">* No Licensed Engineers available.</p>
-      }
+{
+  <p class="zero">* No Licensed Engineers available.</p>
+}
 else
 {
-    @foreach (MachineEngineer registered in Model.JoinEntities)
-    {
-      <p>&rarr;	 @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId})</p>
-    }
+  @foreach (MachineEngineer registered in Model.JoinEntities)
+  {
+    <p>&rarr;	 @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId})</p>
+  }
 }
 
 <p class="new"><a href='/machines/register/@Model.MachineId'>Register <span class="material-symbols-outlined">how_to_reg</span></a></p>

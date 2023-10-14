@@ -1,10 +1,10 @@
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using Factory.Models;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Factory.Controllers
 {
@@ -52,6 +52,7 @@ namespace Factory.Controllers
                                      .FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(selectedEngineer);
     }
+
     public ActionResult Register(int id)
     {
       Engineer engineerToRegister = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);

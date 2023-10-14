@@ -22,24 +22,24 @@
 }
 else
 {
-    @if (ViewBag.Engineers.Count > 0)
+  @if (ViewBag.Engineers.Count > 0)
+  {
+    <h2>Engineers</h2>
+    <hr />
+    @foreach (Engineer added in ViewBag.Engineers)
     {
-      <h2>Engineers</h2>
-      <hr />
-        @foreach (Engineer added in ViewBag.Engineers)
-        {
-          <h5>&rarr;	 @Html.ActionLink(added.Name, "Details", "Engineers", new { id = added.EngineerId })</h5>
-        }
+      <h5>&rarr;	 @Html.ActionLink(added.Name, "Details", "Engineers", new { id = added.EngineerId })</h5>
     }
-    @if (ViewBag.Machines.Count > 0)
+  }
+  @if (ViewBag.Machines.Count > 0)
+  {
+    <br />
+    <h2>Machines</h2>
+    <hr />
+    @foreach (Machine added in ViewBag.Machines)
     {
-      <br />
-      <h2>Machines</h2>
-      <hr />
-        @foreach (Machine added in ViewBag.Machines)
-        {
-          <h5>&rarr;	 @Html.ActionLink(added.Name, "Details", "Machines", new { id = added.MachineId })</h5>
-        }
+      <h5>&rarr;	 @Html.ActionLink(added.Name, "Details", "Machines", new { id = added.MachineId })</h5>
     }
+  }
 }
 

@@ -4,12 +4,12 @@
 
 @model Factory.Models.Engineer
 
-  <br />
-  <h3>Delete @Model.Name?</h3>
-  <br />
-  @using(Html.BeginForm())
-  {
-    <input type="submit" value="Delete" class="btn btn-outline-danger" />
-  }
+<br />
+<h3>Delete @Model.Name?</h3>
+<br />
+@using(Html.BeginForm())
+{
+  <input type="submit" value="Delete" class="btn btn-outline-danger" />
+}
 <hr />
 <p class="new"><a href='/engineers/'>Back <span class="material-symbols-outlined">arrow_back</span></a></p>

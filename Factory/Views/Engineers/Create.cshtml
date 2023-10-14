@@ -2,16 +2,16 @@
   Layout = "_Layout";
 }
 
+@model Factory.Models.Engineer
+
 <h2>New Engineer</h2>
 <hr/>
 
-@model Factory.Models.Engineer
-
-  @using (Html.BeginForm())
-  {
-    <h6>@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })</h6>
-    @Html.TextBoxFor(model => model.Name, new { placeholder= "Name of Engineer", @class = "form-control" })
-    <input type="submit" value="Add Engineer" class="btn btn-outline-primary" />
-  }
+@using (Html.BeginForm())
+{
+  <h6>@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })</h6>
+  @Html.TextBoxFor(model => model.Name, new { placeholder= "Name of Engineer", @class = "form-control" })
+  <input type="submit" value="Add Engineer" class="btn btn-outline-primary" />
+}
 <br />
 <p class="new"><a href='/engineers/'>Back <span class="material-symbols-outlined">arrow_back</span></a></p>
