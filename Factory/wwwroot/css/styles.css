@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-  background-image: linear-gradient(to right, rgb(29, 197, 248), rgb(255, 255, 255), rgb(0, 60, 255));
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(170, 222, 255), rgb(227, 223, 255));
   -webkit-background-clip: text; 
   background-clip: text;
   color: transparent;
