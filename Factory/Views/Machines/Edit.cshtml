@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Edit
+<br />
+@Model.Name?
+</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(selectedMachine => selectedMachine.MachineId)
+  @Html.EditorFor(selectedMachine => selectedMachine.Name, new { htmlAttributes = new { @class = "form-control" } })
+  <br />
+  <input type="submit" value="Save Changes" class="btn btn-success" />
+}
