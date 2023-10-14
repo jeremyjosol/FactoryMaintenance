@@ -12,6 +12,5 @@
 {
   @Html.HiddenFor(selectedEngineer => selectedEngineer.EngineerId)
   @Html.EditorFor(selectedEngineer => selectedEngineer.Name, new { htmlAttributes = new { @class = "form-control" } })
-  <br />
   <input type="submit" value="Save Changes" class="btn btn-outline-success" />
 }
