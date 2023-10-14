@@ -5,8 +5,13 @@
 @using Factory.Models;
 
 @if (ViewBag.Engineers.Count == 0 && ViewBag.Machines.Count == 0)
-{
+{ 
+  <br />
   <p>No Engineers or Machines available.</p>
+  <br />
+  <p class="new"><a href='/machines/create'>New Machine <span class="material-symbols-outlined">Add_circle</span></a></p>
+  <p class="new"><a href='/engineers/create'>New Engineer <span class="material-symbols-outlined">Add_circle</span></a></p>
+
 }
 else
 {
