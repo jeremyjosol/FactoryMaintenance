@@ -4,11 +4,9 @@
 
 @model Factory.Models.Machine
 
-  <h2>Delete
   <br /> 
-  @Model.Name?
-  </h2>
-  <hr/>
+  <h3>Delete @Model.Name?</h3>
+  <br />
   @using(Html.BeginForm())
   {
     <input type="submit" value="Delete" class="btn btn-outline-danger" />
