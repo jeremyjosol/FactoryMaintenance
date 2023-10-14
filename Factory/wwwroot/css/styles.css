@@ -196,3 +196,8 @@ p {
   margin: auto;
   margin-left: 35px;
 }
+
+.name {
+  font-size: 40px;
+  font-weight: bolder;
+}
