@@ -10,6 +10,7 @@
   @using (Html.BeginForm())
   {
     @Html.TextBoxFor(model => model.Name, new { placeholder= "Name of Engineer", @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Name)
     <input type="submit" value="Add Engineer" class="btn btn-outline-primary" />
   }
 <br />
