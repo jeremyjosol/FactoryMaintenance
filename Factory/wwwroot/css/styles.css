@@ -29,6 +29,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: rgb(194, 151, 249);
+}
+
 p {
   margin-bottom: 2px;
 }
@@ -38,8 +42,8 @@ p {
   height: 315px;
   max-height: 350px;
   width: 350px;
-  margin: 50px 0 0 300px;
-  border-radius: 25px;
+  margin: 60px 0 0 300px;
+  border-radius: 10px;
   text-align: center;
   overflow: auto;
 }
@@ -47,6 +51,8 @@ p {
 .navigation {
   margin: auto;
   margin: 75px 0 0 1px;
+  height: 315px;
+  max-height: 350px;
   width: 225px;
   position: fixed;
 }
