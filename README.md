@@ -4,6 +4,15 @@
 
 This is a MVC web application designed to simplify the management of engineers and their respective machine repair operations for a mock factory. This user-friendly system allows access to full CRUD operations and the ability to register new machines and assign specific engineers to each machine for repairs. With a many-to-many relationship in place, engineers can have licenses to work on multiple machines while machines can also have a diverse team of engineers with expertise in repairing them. 
 
+<html>
+<img src="Factory/wwwroot/img/FactoryMaintenance.jpg">
+</html>
+<br />
+Still learning and consistently pushing to put media queries and responsive web design into practice, the content dynamically rearranges itself to fit to screen when the window size is adjusted, for instance:
+
+<html>
+<img src="Factory/wwwroot/img/FactoryMaintenanceResponsive.jpg">
+
 ## Technologies Used
 * _Github_
 * _VSCode_
