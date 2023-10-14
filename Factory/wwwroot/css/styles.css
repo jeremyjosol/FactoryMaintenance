@@ -47,6 +47,7 @@ p {
   height: 335px;
   max-height: 385px;
   width: 350px;
+  max-width: 500px;
   margin: 60px 0 0 325px;
   border-radius: 10px;
   text-align: center;

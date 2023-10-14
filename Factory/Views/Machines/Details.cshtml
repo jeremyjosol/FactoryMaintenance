@@ -5,13 +5,13 @@
 @model Factory.Models.Machine;
 @using Factory.Models;
 
-<h2>@Html.DisplayFor(selectedMachine => selectedMachine.Name)</h2>
+<h3>@Html.DisplayFor(selectedMachine => selectedMachine.Name)</h3>
 <hr/>
-<p><strong>Registered Engineers</strong></p>
+<p><strong>Licensed Engineers</strong></p>
 
 @if (Model.JoinEntities.Count == 0)
       {
-        <p class="zero">* None registered</p>
+        <p class="zero">* No Licensed Engineers available.</p>
         <p class="new"><a href='/machines/register/@Model.MachineId'>Register <span class="material-symbols-outlined">how_to_reg</span></a></p>
 
       }
