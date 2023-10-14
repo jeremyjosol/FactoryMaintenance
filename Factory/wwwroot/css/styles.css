@@ -1,5 +1,5 @@
 body {
-  background-image: url(../img/FactoryMaintenance.jpg);
+  background-image: url(../img/Factory.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
@@ -20,7 +20,11 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
+  background-image: linear-gradient(to right, rgb(29, 197, 248), rgb(255, 255, 255), rgb(0, 60, 255));
+  -webkit-background-clip: text; /* For webkit browsers (Chrome, Safari, etc.) */
+  background-clip: text;
+  color: transparent;
+  font-size: 75px;
   font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -30,7 +34,7 @@ a {
 }
 
 a:hover {
-  color: rgb(205, 177, 255);
+  color: rgb(0, 221, 255);
 }
 
 p {
@@ -42,7 +46,7 @@ p {
   height: 315px;
   max-height: 385px;
   width: 350px;
-  margin: 60px 0 0 300px;
+  margin: 60px 0 0 325px;
   border-radius: 10px;
   text-align: center;
   overflow: auto;
