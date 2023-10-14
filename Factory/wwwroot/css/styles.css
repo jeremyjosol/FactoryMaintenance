@@ -87,7 +87,7 @@ p {
     padding-right: 18px;
   }
 
-  .indent {
+  .container .indent {
     margin: auto;
     margin-left: 25px;
   }
@@ -111,7 +111,7 @@ p {
 
   }
 
-  .indent {
+  .container .indent {
     margin: auto;
     margin-left: 20px;
   }
@@ -134,7 +134,7 @@ p {
     padding-right: 18px;
   }
 
-  .indent {
+  .container .indent {
     margin: auto;
     margin-left: 10px;
   }
@@ -182,7 +182,7 @@ p {
     padding-right: 18px;
   }
 
-  .indent {
+  .container .indent {
     margin: auto;
     margin-left: 3px;
   }
