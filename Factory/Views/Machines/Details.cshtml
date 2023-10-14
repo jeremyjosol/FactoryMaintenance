@@ -5,11 +5,25 @@
 @model Factory.Models.Machine;
 @using Factory.Models;
 
-  <h2>Machine Details</h2>
-  <hr/>
-  <p><strong>@Html.DisplayNameFor(selectedMachine => selectedMachine.Name)</strong>: @Html.DisplayFor(selectedMachine => selectedMachine.Name)</p>
+<h2>@Html.DisplayFor(selectedMachine => selectedMachine.Name)</h2>
 <hr/>
+<p><strong>Registered Engineers</strong></p>
 
-<p>@Html.ActionLink("Register Machine", "Register", new { id = @Model.MachineId })</p>
-<p>@Html.ActionLink("Delete Machine", "Delete", new { id = @Model.MachineId, })</p>
-<p class="new"><a href='/machines/'>Back <span class="material-symbols-outlined">arrow_back</span></a></p>
+@if (Model.JoinEntities.Count == 0)
+      {
+        <p class="zero">* None registered</p>
+        <p class="new"><a href='/machines/register/@Model.MachineId'>Register <span class="material-symbols-outlined">how_to_reg</span></a></p>
+
+      }
+else
+{
+  <ul>
+    @foreach (MachineEngineer registered in Model.JoinEntities)
+    {
+      <p>- @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId})</p>
+    }
+  </ul>
+}
+
+<p class="new"><a href='/machines/delete/@Model.MachineId'>Delete <span class="material-symbols-outlined">delete_forever</span></a></p>
+<p class="new"><a href='/engineers/'>Back <span class="material-symbols-outlined">arrow_back</span></a></p>

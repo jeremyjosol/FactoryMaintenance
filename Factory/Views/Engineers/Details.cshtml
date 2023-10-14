@@ -17,12 +17,10 @@
       }
 else
 {
-  <ul>
     @foreach (MachineEngineer registered in Model.JoinEntities)
     {
-      <li>@Html.ActionLink($"{registered.Machine.Name}", "Details", "Machines", new { id = registered.MachineId})</li>
+      <p>-@Html.ActionLink($"{registered.Machine.Name}", "Details", "Machines", new { id = registered.MachineId})</p>
     }
-  </ul>
 }
 
 <p class="new"><a href='/engineers/delete/@Model.EngineerId'>Delete <span class="material-symbols-outlined">delete_forever</span></a></p>
