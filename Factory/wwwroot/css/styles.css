@@ -39,7 +39,6 @@ p {
   max-height: 350px;
   width: 350px;
   margin: 50px 0 0 300px;
-  margin-left: 300px;
   border-radius: 25px;
   text-align: center;
   overflow: auto;
@@ -47,14 +46,15 @@ p {
 
 .navigation {
   margin: auto;
-  margin: 75px 0 0 25px;
-  width: 100px;
+  margin: 75px 0 0 1px;
+  width: 225px;
   position: fixed;
 }
 
 @media (max-width: 768px) {
   .container {
-    margin: 75px 0 0 100px;
+    width: 275px;
+    margin: 75px 0 0 150px;
   }
 }
 
@@ -73,6 +73,11 @@ p {
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+
+.index-new {
+  margin: auto;
+  font-size: 40px;
 }
 
 .new {

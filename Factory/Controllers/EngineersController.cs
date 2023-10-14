@@ -72,7 +72,7 @@ namespace Factory.Controllers
       }
       return RedirectToAction("Details", new { id = selectedEngineer.EngineerId });
     }
-    
+
     public ActionResult Delete(int id)
     {
       Engineer selectedEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
@@ -84,6 +84,20 @@ namespace Factory.Controllers
     {
       Engineer selectedEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       _db.Engineers.Remove(selectedEngineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Edit(int id)
+    {
+      Engineer selectedEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      return View(selectedEngineer);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Engineer engineer)
+    {
+      _db.Engineers.Update(engineer);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

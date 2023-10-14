@@ -22,8 +22,9 @@
         <p>@Html.ActionLink("Home", "Index", "Home")</p>
         <p>@Html.ActionLink("Engineers", "Index", "Engineers")</p>
         <p>@Html.ActionLink("Machines", "Index", "Machines")</p>
-        <p>@Html.ActionLink("+ Engineer", "Create", "Engineers")</p>
-        <p>@Html.ActionLink("+ Machine", "Create", "Machines")</p>
+        @* <p>@Html.ActionLink("+ Engineer", "Create", "Engineers")</p>
+        <p>@Html.ActionLink("+ Machine", "Create", "Machines")</p> *@
+        <p class="index-new"><a href='/engineers/create'>Engineer <span class="material-symbols-outlined">Add_circle</span></a></p>
       </div>
       </div>
       <div class="col-8">
