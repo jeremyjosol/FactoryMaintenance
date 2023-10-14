@@ -278,6 +278,11 @@ p {
   margin-bottom: 5px;
 }
 
+.btn-outline-danger:hover {
+  background-color: transparent;
+  color: red;
+}
+
 .indent {
   margin: auto;
   margin-left: 35px;
