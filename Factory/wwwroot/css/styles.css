@@ -79,6 +79,18 @@ p {
   .container .btn {
     width: 300px; 
   }
+
+  .container .btn-outline-danger {
+    width: 10px;
+    margin: auto;
+    margin-left: 10px;
+    padding-right: 18px;
+  }
+
+  .indent {
+    margin: auto;
+    margin-left: 25px;
+  }
 }
 
 @media (max-width: 656px) {
@@ -90,6 +102,19 @@ p {
   .container .btn {
     width: 280px;
   }
+  
+  .container .btn-outline-danger {
+    width: 10px;
+    margin: auto;
+    margin-left: 12px;
+    padding-right: 18px;
+
+  }
+
+  .indent {
+    margin: auto;
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -100,6 +125,18 @@ p {
 
   .container .btn {
     width: 280px;
+  }
+
+  .container .btn-outline-danger {
+    width: 5px;
+    margin: auto;
+    margin-left: 10px;
+    padding-right: 18px;
+  }
+
+  .indent {
+    margin: auto;
+    margin-left: 15px;
   }
 }
 
@@ -113,6 +150,18 @@ p {
   .container .btn {
     width: 250px;
   }
+
+  .container .btn-outline-danger {
+    width: 5px;
+    margin: auto;
+    margin-left: 15px;
+    padding-right: 18px;
+  }
+
+  .indent {
+    margin: auto;
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 525px) {
@@ -124,6 +173,18 @@ p {
 
   .container .btn {
     width: 245px;
+  }
+
+  .container .btn-outline-danger {
+    width: 5px;
+    margin: auto;
+    margin-left: 2px;
+    padding-right: 18px;
+  }
+
+  .container .indent {
+    margin: auto;
+    margin-left: 10px;
   }
 }
 
@@ -137,6 +198,18 @@ p {
   .container .btn {
     width: 230px;
   }
+
+  .container .btn-outline-danger {
+    width: 5px;
+    margin: auto;
+    margin-left: 2px;
+    padding-right: 18px;
+  }
+
+  .container .indent {
+    margin: auto;
+    margin-left: 6px;
+  }
 }
 
 @media (max-width: 338px) {
@@ -148,6 +221,18 @@ p {
 
   .container .btn {
     width: 240px;
+  }
+
+  .container .btn-outline-danger {
+    width: 5px;
+    margin: auto;
+    margin-left: 1px;
+    padding-right: 18px;
+  }
+
+  .container .indent {
+    margin: auto;
+    margin-left: 1px;
   }
 }
 
