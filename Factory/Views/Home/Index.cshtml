@@ -10,13 +10,13 @@
   <h5>Welcome to your Portal.</h5>
   <br />
   <br />
-  <h6 class="zero">* Currently, there are no 
+  <h6>Currently, there are no 
   <br /> Engineers or Machines
   <br /> in the portal.</h6>
   <br />
   <h6>Create a new 
   <br />
-  Engineer or Machine 
+  @Html.ActionLink("Engineer", "Create", "Engineers") or @Html.ActionLink("Machine", "Create", "Machines") 
   <br />
   to update the Portal.</h6>
 }
