@@ -4,18 +4,12 @@
 
 @model Factory.Models.Engineer
 
-<div class="container">
-  <h2>Delete @Model.Name?</h2>
-  <hr/>
-  <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-  <br/>
+  <h2>Delete 
+  <br />@Model.Name?
+  </h2>
   @using(Html.BeginForm())
   {
     <input type="submit" value="Delete" class="btn btn-danger" />
   }
-  </div>
-
 <hr />
-<div class="container">
-  <h5>@Html.ActionLink("Back to Engineer", "Details", new { id = Model.EngineerId })</h5>
-</div>
+<p class="new"><a href='/engineers/'>Back <span class="material-symbols-outlined">arrow_back</span></a></p>
