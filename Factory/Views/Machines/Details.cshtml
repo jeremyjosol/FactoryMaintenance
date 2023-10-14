@@ -21,7 +21,7 @@ else
     {
     @Html.Hidden("joinId", @registered.MachineEngineerId)
     <p class="indent">
-      &rarr;  @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Machines", new { id = registered.MachineId})    
+      &rarr;  @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId })    
       <input type="submit" value="X" class="btn btn-outline-danger btn-sm"/>
     </p>
     }
