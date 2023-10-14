@@ -20,8 +20,8 @@ else
     @using (Html.BeginForm("DeleteJoin", "Engineers"))
     {
     @Html.Hidden("joinId", @registered.MachineEngineerId)
-    <p>
-      &rarr;	 @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Machines", new { id = registered.MachineId})    
+    <p class="indent">
+      &rarr;  @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Machines", new { id = registered.MachineId})    
       <input type="submit" value="X" class="btn btn-outline-danger btn-sm"/>
     </p>
     }

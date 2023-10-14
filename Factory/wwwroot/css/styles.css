@@ -191,3 +191,8 @@ p {
   margin-left: 15px;
   margin-bottom: 5px;
 }
+
+.indent {
+  margin: auto;
+  margin-left: 35px;
+}
