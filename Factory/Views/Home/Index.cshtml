@@ -16,7 +16,7 @@ else
       <hr />
         @foreach (Engineer added in ViewBag.Engineers)
         {
-          <p>- @Html.ActionLink(added.Name, "Details", "Engineers", new { id = added.EngineerId })</p>
+          <p>&rarr;	 @Html.ActionLink(added.Name, "Details", "Engineers", new { id = added.EngineerId })</p>
         }
     }
     @if (ViewBag.Machines.Count > 0)
@@ -26,7 +26,7 @@ else
       <hr />
         @foreach (Machine added in ViewBag.Machines)
         {
-          <p>- @Html.ActionLink(added.Name, "Details", "Machines", new { id = added.MachineId })</p>
+          <p>&rarr;	 @Html.ActionLink(added.Name, "Details", "Machines", new { id = added.MachineId })</p>
         }
     }
 }

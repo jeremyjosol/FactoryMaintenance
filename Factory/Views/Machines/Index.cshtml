@@ -15,7 +15,7 @@ else
 {
     @foreach(Machine added in Model)
     {
-      <p>- @Html.ActionLink($"{added.Name}", "Details", new { id = added.MachineId })</p>
+      <p>&rarr;	@Html.ActionLink($"{added.Name}", "Details", new { id = added.MachineId })</p>
     }
 }
 <br />

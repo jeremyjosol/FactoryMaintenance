@@ -19,7 +19,7 @@ else
 {
     @foreach (MachineEngineer registered in Model.JoinEntities)
     {
-      <p>- @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId})</p>
+      <p>&rarr;	 @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId})</p>
     }
 }
 
