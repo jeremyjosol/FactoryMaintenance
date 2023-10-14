@@ -7,6 +7,7 @@ namespace Factory.Models
   public class Machine
   {
     public int MachineId { get; set; }
+    [Required(ErrorMessage = "* Please fill out this field with a valid entry.")]
     public string Name { get; set; }
     public List<MachineEngineer> JoinEntities { get; }
   }
