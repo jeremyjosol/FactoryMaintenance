@@ -136,11 +136,35 @@ p {
 
   .indent {
     margin: auto;
-    margin-left: 15px;
+    margin-left: 10px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 560px) {
+  .container {
+    width: 275px;
+    height: 350px;
+    margin: 60px 0 0 220px;
+  }
+
+  .container .btn {
+    width: 250px;
+  }
+
+  .container .btn-outline-danger {
+    width: 5px;
+    margin: auto;
+    margin-left: 15px;
+    padding-right: 18px;
+  }
+
+  .container .indent {
+    margin: auto;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 556px) {
   .container {
     width: 275px;
     height: 350px;
@@ -160,7 +184,7 @@ p {
 
   .indent {
     margin: auto;
-    margin-left: 10px;
+    margin-left: 3px;
   }
 }
 
@@ -184,9 +208,10 @@ p {
 
   .container .indent {
     margin: auto;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
+
 
 @media (max-width: 444px) {
   .container {
@@ -208,7 +233,7 @@ p {
 
   .container .indent {
     margin: auto;
-    margin-left: 6px;
+    margin-left: 2px;
   }
 }
 
