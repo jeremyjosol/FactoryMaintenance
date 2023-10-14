@@ -7,8 +7,7 @@ This is a MVC web application designed to simplify the management of engineers a
 <html>
 <img src="Factory/wwwroot/img/FactoryMaintenance.jpg">
 </html>
-<br />
-Still learning, researching, and consistently pushing to put media queries and responsive web design into practice. The content of this application dynamically rearranges itself to fit to screen when the window size is adjusted. 
+Pushing to put media queries and responsive web design into practice, the content of this application dynamically rearranges itself to fit to screen when the window size is adjusted. 
 
 > For instance:
 
