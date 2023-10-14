@@ -26,7 +26,7 @@ h2 {
   -webkit-background-clip: text; 
   background-clip: text;
   color: transparent;
-  font-size: 75px;
+  font-size: 70px;
 }
 
 a {
@@ -44,7 +44,7 @@ p {
 
 .container {
   background-color: rgba(0, 0, 0, 0.691);
-  height: 335px;
+  height: 375px;
   max-height: 385px;
   width: 350px;
   max-width: 500px;
