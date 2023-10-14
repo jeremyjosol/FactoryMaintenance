@@ -17,7 +17,14 @@ else
 {
   @foreach (MachineEngineer registered in Model.JoinEntities)
   {
-    <p>&rarr;	 @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Engineers", new { id = registered.EngineerId})</p>
+    @using (Html.BeginForm("DeleteJoin", "Engineers"))
+    {
+    @Html.Hidden("joinId", @registered.MachineEngineerId)
+    <p>
+      &rarr;	 @Html.ActionLink($"{registered.Engineer.Name}", "Details", "Machines", new { id = registered.MachineId})    
+      <input type="submit" value="X" class="btn btn-outline-danger btn-sm"/>
+    </p>
+    }
   }
 }
 

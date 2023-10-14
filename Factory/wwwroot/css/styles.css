@@ -181,3 +181,13 @@ p {
 .zero {
   color: rgba(246, 78, 78, 0.864);
 }
+
+.btn-outline-danger {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  margin: auto;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
