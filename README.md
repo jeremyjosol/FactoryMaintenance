@@ -28,27 +28,12 @@ Pushing to put media queries and responsive web design into practice, the conten
 * _Material Symbols_
 * _MySQL Workbench_
 
-## Setup Instructions
-
-1. Clone this repo.
-
-## Database Setup
-
-1. Launch MySQL Workbench and access the Administration section in the Navigator.
-2. Within the Administration window, select Data Import/Restore.
-3. In the Import Options, choose "Import from Self-Contained File."
-4. Locate the SQL file, named `factory_maintenance.sql`, within the project's root directory.
-5. Under "Default Schema to be Imported To," create a new schema.
-6. Assign a suitable name for your database or simply use `factory_maintenance.sql` as the schema name.
-7. Confirm your selection by clicking "OK".
-8. Proceed to the "Import Progress" tab and initiate the import process by selecting "Start Import" located at the bottom right corner of the window.
-9. Once the import is completed, reopen the Navigator, navigate to the "Schemas" tab, and perform a right-click action. Choose "Refresh All" to ensure the changes are reflected.
-
 ## Application Setup
 
-1. Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory called `Factory`. 
-2. Within the production directory `Factory`, create a new file entitled `appsettings.json`.
-3. Within `appsettings.json`, enter the following code:
+1. Clone this repo.
+2. Open your shell (e.g., Terminal or GitBash) and navigate to this project's production directory called `Factory`. 
+3. Within the production directory `Factory`, create a new file entitled `appsettings.json`.
+4. Within `appsettings.json`, enter the following code:
 ```json
 {
   "ConnectionStrings": {
@@ -57,7 +42,9 @@ Pushing to put media queries and responsive web design into practice, the conten
 }
 ```
   > Be sure to replace the `{DATABASE}`, `{USERNAME}` and `{PASSWORD}` fields with your own relevant information. Do not include the curly brackets.
-4. In the production directory, you can enter the following command `dotnet watch run`.
+5. In production directory, enter the following command `dotnet ef database update`. 
+  > This command will initialize the repository's migrations to establish and maintain the database.
+6. In the production directory, you can enter the following command `dotnet watch run`.
   > This command will start the project in development mode with a watcher.
 
 ## Known Bugs
