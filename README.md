@@ -28,6 +28,12 @@ Pushing to put media queries and responsive web design into practice, the conten
 * _Material Symbols_
 * _MySQL Workbench_
 
+## Prerequisites
+
+* _MySQL_
+* _MySQL Workbench_
+* _Entity Framework Core_
+
 ## Application Setup
 
 1. Clone this repo.
